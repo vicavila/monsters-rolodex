@@ -18,12 +18,7 @@ class App extends Component {
  render() {
   return (
    <div className="App">
-    {/* the component html-like attributes are passed as props.name */}
-    <CardList name="Yihua">
-    {/* everything inside the component is passed as props.children */}
-     {
-      this.state.monsters.map(monster => (<h1 key={monster.id}> { monster.name }</h1>))
-     }
+    <CardList monsters={this.state.monsters}>
     </CardList>
    </div>
   );
